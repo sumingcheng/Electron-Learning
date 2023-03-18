@@ -14,3 +14,4 @@ app.on('window-all-closed', () => {
 ipcMain.on('mainEvent', (arguments) => {
   console.log('Main', arguments)
 })
+
