@@ -1,2 +1,6 @@
 // 访问暴露的变量
-console.log(window.api)
+
+const app = document.getElementById('app')
+app.addEventListener('click', function () {
+  window.api.hello()
+})
