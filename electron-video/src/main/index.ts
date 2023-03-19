@@ -8,17 +8,28 @@ function createWindow(): void {
   const mainWindow = new BrowserWindow({
     width: 300,
     height: 300,
+    minWidth: 250,
+    minHeight: 250,
+    maxHeight: 600,
+    maxWidth: 600,
     x: 1600,
     y: 200,
     show: false,
     alwaysOnTop: true,
     autoHideMenuBar: true,
+    // 隐藏标题
+    frame: false,
+    // 透明
+    transparent: true,
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       sandbox: false
     }
   })
+
+  mainWindow.setAspectRatio(1)
+
   mainWindow.webContents.openDevTools()
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()

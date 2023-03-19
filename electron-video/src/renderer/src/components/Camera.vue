@@ -1,6 +1,5 @@
 <script setup lang="ts">
-// 设备列表
-// const devices = await navigator.mediaDevices.enumerateDevices()
+
 import { onMounted } from 'vue'
 
 // 获取摄像头
@@ -20,12 +19,11 @@ onMounted(() => {
       console.log(err)
     })
 })
-
 </script>
 
 <template>
-  <main>
-    <video></video>
+  <main class="w-screen h-screen flex">
+    <video class="object-cover"></video>
   </main>
 </template>
 

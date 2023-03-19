@@ -1,15 +1,14 @@
 <script setup lang="ts">
-import Camear from './components/Camera.vue'
+// import Camear from './components/Camera.vue'
+import Setting from './components/Setting.vue'
 </script>
 
 <template>
   <Suspense>
     <main>
-      <Camear></Camear>
+      <!-- <Camear></Camear> -->
+      <Setting></Setting>
     </main>
   </Suspense>
 </template>
 
-<style lang="less">
-@import './assets/css/styles.less';
-</style>
