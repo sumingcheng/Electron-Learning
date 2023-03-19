@@ -16,6 +16,8 @@ const config = [
     submenu: [
       {
         label: '打开',
+        // 定义热键
+        accelerator: 'CommandOrControl+I',
         click: async () => {
           new BrowserWindow({
             width: 300,
