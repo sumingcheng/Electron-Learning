@@ -8,3 +8,7 @@ contextBridge.exposeInMainWorld('electron', {
   }
 })
 
+window.addEventListener('contextmenu', (e) => {
+  e.preventDefault()
+  ipcRenderer.send('mainMenu', 'mainMenu')
+})
