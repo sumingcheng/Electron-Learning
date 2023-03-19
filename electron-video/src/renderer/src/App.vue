@@ -1,9 +1,13 @@
 <script setup lang="ts">
+import Camear from './components/Camera.vue'
 </script>
 
 <template>
-  <el-button>main</el-button>
-  <div class="bg-red-600">123</div>
+  <Suspense>
+    <main>
+      <Camear></Camear>
+    </main>
+  </Suspense>
 </template>
 
 <style lang="less">
