@@ -17,5 +17,5 @@ ipcMain.on('saveFileMain', async (event, data) => {
   let { filePath } = await dialog.showSaveDialog({
     title: '保存文件',
   })
-  fs.writeFileSync(filePath, data)
+  fs.writeFileSync(filePath, data, 'utf-8')
 })
